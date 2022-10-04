@@ -253,15 +253,15 @@ public class BlockESP extends Module
     }
     
     public static double getRenderPosY() {
-        return (double)ReflectUtil.getField("renderPosY", "renderPosY", Minecraft.getMinecraft().getRenderManager());
+        return (double)ReflectUtil.getField("renderPosY", "field_78726_c", Minecraft.getMinecraft().getRenderManager());
     }
     
     public static double getRenderPosZ() {
-        return (double)ReflectUtil.getField("renderPosZ", "renderPosZ", Minecraft.getMinecraft().getRenderManager());
+        return (double)ReflectUtil.getField("renderPosZ", "field_78728_n", Minecraft.getMinecraft().getRenderManager());
     }
     
     public static double getRenderPosX() {
-        return (double)ReflectUtil.getField("renderPosX", "renderPosX", Minecraft.getMinecraft().getRenderManager());
+        return (double)ReflectUtil.getField("renderPosX", "field_78725_b", Minecraft.getMinecraft().getRenderManager());
     }
     
     public static void renderChest(BlockPos blockPos) {

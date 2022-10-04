@@ -32,7 +32,7 @@ public class FastPlace extends Module
         }
         catch (Exception d) {
             try {
-                this.c = this.mc.getClass().getDeclaredField("rightClickDelayTimer");
+                this.c = this.mc.getClass().getDeclaredField("field_71467_ac");
             }
             catch (Exception ex) {}
         }

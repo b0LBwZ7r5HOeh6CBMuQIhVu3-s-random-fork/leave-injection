@@ -62,7 +62,7 @@ public class SpeedMine extends Module
     
     public static void setCurBlockDamageMP(Minecraft mc, float damage) {
         try {
-            Field m = PlayerControllerMP.class.getDeclaredField(Client.isObfuscate ? "curBlockDamageMP" : "curBlockDamageMP");
+            Field m = PlayerControllerMP.class.getDeclaredField(Client.isObfuscate ? "field_78770_f" : "curBlockDamageMP");
             m.setAccessible(true);
             m.set(mc.playerController, damage);
             m.setAccessible(false);
@@ -75,7 +75,7 @@ public class SpeedMine extends Module
     
     public static float getCurBlockDamageMP(Minecraft mc) {
         try {
-            Field m = PlayerControllerMP.class.getDeclaredField(Client.isObfuscate ? "curBlockDamageMP" : "curBlockDamageMP");
+            Field m = PlayerControllerMP.class.getDeclaredField(Client.isObfuscate ? "field_78770_f" : "curBlockDamageMP");
             m.setAccessible(true);
             float curv = (float)m.get(mc.playerController);
             m.setAccessible(false);
@@ -92,8 +92,8 @@ public class SpeedMine extends Module
     public boolean onPacket(Object packet, Side side) {
         if (this.Reflection.getEnable()) {
             if (!SpeedMine.mc.playerController.isInCreativeMode()) {
-                Field field = ReflectionHelper.findField((Class)PlayerControllerMP.class, new String[] { "curBlockDamageMP", "curBlockDamageMP" });
-                Field blockdelay = ReflectionHelper.findField((Class)PlayerControllerMP.class, new String[] { "blockHitDelay", "blockHitDelay" });
+                Field field = ReflectionHelper.findField((Class)PlayerControllerMP.class, new String[] { "curBlockDamageMP", "field_78770_f" });
+                Field blockdelay = ReflectionHelper.findField((Class)PlayerControllerMP.class, new String[] { "blockHitDelay", "field_78781_i" });
                 try {
                     if (!field.isAccessible()) {
                         field.setAccessible(true);
@@ -190,7 +190,7 @@ public class SpeedMine extends Module
     
     public static void setBlockHitDelay(Minecraft mc, int delay) {
         try {
-            Field m = PlayerControllerMP.class.getDeclaredField(Client.isObfuscate ? "blockHitDelay" : "blockHitDelay");
+            Field m = PlayerControllerMP.class.getDeclaredField(Client.isObfuscate ? "field_78781_i" : "blockHitDelay");
             m.setAccessible(true);
             m.set(mc.playerController, delay);
             m.setAccessible(false);

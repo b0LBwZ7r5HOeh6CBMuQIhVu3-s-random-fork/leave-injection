@@ -679,7 +679,7 @@ public class HUDUtils
         }
         catch (Exception var4) {
             try {
-                HUDUtils.timerField = Minecraft.class.getDeclaredField("timer");
+                HUDUtils.timerField = Minecraft.class.getDeclaredField("field_71428_T");
             }
             catch (Exception ex) {}
         }
